@@ -1,0 +1,13 @@
+<p>taxonomy-view-list works!</p>
+<div>
+  <li *ngFor="let view of this.taxonomyViews">
+    <p (click)="toggle(view)">{{view.title}}</p>
+    <div *ngIf="showing === view.title">
+      <app-taxonomy-view [view]="view"></app-taxonomy-view>
+    </div>
+  </li>
+
+  <p *ngFor="let plant of plants">
+    Plant: {{plant}}
+  </p>
+</div>
